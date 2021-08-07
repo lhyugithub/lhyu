@@ -1,0 +1,11 @@
+beam, mass:=0.511e-3, charge:=-1, gamma:=5870.84, exn:=1.0e-09, eyn:=1.0e-09, sige:=0.001; 
+
+
+use, period=RING;
+select, flag=twiss, column=name,s,betx,bety, mux, muy, dx;
+twiss,table=twiss,file=parameters_input,  save;
+use,sequence=RING;
+ptc_create_universe;
+ptc_create_layout,model=1,method=2,exact,nst=40;
+ptc_normal,icase=5,no=7;
+ptc_end;

@@ -1,0 +1,12 @@
+SDDS1
+!# little-endian
+&column name=x, units=m, type=double, &end
+&column name=xp, type=double, &end
+&column name=y, units=m, type=double, &end
+&column name=yp, type=double, &end
+&column name=t, units=s, type=double, &end
+&column name=p, units=m$be$nc, type=double, &end
+&column name=dt, units=s,type=double, &end
+&column name=particleID, type=long, &end
+&data mode=ascii, &end
+!page number 1

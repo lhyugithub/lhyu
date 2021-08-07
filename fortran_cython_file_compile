@@ -1,0 +1,35 @@
+#!/bin/bash
+#before compile, first: run conda activate py3
+"""
+cd PyTPSA/cython/
+rm -rf build
+rm tpsalib.cpython-37m-darwin.so
+python setup.py build_ext --inplace
+cp tpsalib.cpython-37m-darwin.so ../..
+cd ..
+"""
+
+
+cd f2pydirpy3
+python f2pycompiler.py
+cp ftm.cpython-37m-darwin.so ..
+cp zcolarray.cpython-37m-darwin.so ..
+cp zcol.cpython-37m-darwin.so ..
+cp orderdot.cpython-37m-darwin.so ..
+cp dot.cpython-37m-darwin.so ..
+cp lineareq.cpython-37m-darwin.so ../..
+cp mysum.cpython-37m-darwin.so ../..
+cp zcolnew.cpython-37m-darwin.so ../..
+
+cd ..
+cd cytpsacompiler
+python cython_setup.py build_ext --inplace
+cp cytpsa.cpython-37m-darwin.so ..
+
+cd ..
+
+
+
+
+
+
